@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+  color: #000;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ 
+form > div > input {
+    padding: 5px;
+ }
+
+
