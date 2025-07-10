@@ -1,11 +1,6 @@
 import { Component, input, output, inject } from '@angular/core';
 import { RestaurantClient } from '../../data/models/client.modal';
-import {
-  FormBuilder,
-  FormGroup,
-  Validators,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
@@ -30,7 +25,7 @@ export class ClientFormComponent {
       name: ['', Validators.required],
       contact: this.fb.group({
         name: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
+        // email: ['', [Validators.required, Validators.email]],
         phone: ['', Validators.required],
       }),
       address: this.fb.group({
