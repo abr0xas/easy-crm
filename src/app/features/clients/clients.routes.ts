@@ -8,17 +8,22 @@ export const CLIENTS_ROUTES: Routes = [
     component: ClientListComponent,
     // Puedes agregar children si tienes subrutas
   },
- {
+  {
     path: 'create',
     component: ClientCreateComponent,
-    title: 'Nuevo Cliente'
+    title: 'Nuevo Cliente',
+  },
+  {
+    path: 'edit:id',
+    component: ClientCreateComponent,
+    title: 'Editar Cliente',
   },
   {
     path: 'list',
     component: ClientListComponent,
-    title: 'Lista de Clientes'
+    title: 'Lista de Clientes',
   },
- /*  {
+  /*  {
     path: ':id',
     component: ClientDetailComponent,
     title: 'Detalle del Cliente'

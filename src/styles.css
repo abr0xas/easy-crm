@@ -8,13 +8,15 @@ form {
 }
 
 form > div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
- 
-form > div > input {
-    padding: 5px;
- }
 
+input {
+  margin: 5px;
+}
 
+* {
+  font-family: monospace;
+}

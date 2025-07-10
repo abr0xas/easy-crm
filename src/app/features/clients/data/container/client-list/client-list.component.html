@@ -1,6 +1,6 @@
 <div class="client-list">
   <h2>Lista de Clientes</h2>
-  
+
   @if (clients().length === 0) {
     <p>No hay clientes registrados.</p>
   } @else {
@@ -13,6 +13,7 @@
           <th>Teléfono</th>
           <th>Dirección</th>
           <th>Estado</th>
+          <th>Acción</th>
         </tr>
       </thead>
       <tbody>
@@ -26,8 +27,28 @@
               {{ client.address.street }}, {{ client.address.city }}, {{ client.address.country }}
             </td>
             <td>
-              {{ client.status === 'active' ? 'Activo' : 
-                 client.status === 'inactive' ? 'Inactivo' : 'Prospecto' }}
+              {{
+                client.status === 'active'
+                  ? 'Activo'
+                  : client.status === 'inactive'
+                    ? 'Inactivo'
+                    : 'Prospecto'
+              }}
+            </td>
+            <td>
+              <button
+                title="Editar"
+                style="background: none; border: none; cursor: pointer; font-size: 1.2em"
+                (click)="edit(client)"
+              >
+                ✏️
+              </button>
+              <button
+                title="Eliminar"
+                style="background: none; border: none; cursor: pointer; font-size: 1.2em"
+              >
+                🗑️
+              </button>
             </td>
           </tr>
         }

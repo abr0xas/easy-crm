@@ -1,4 +1,4 @@
-import { Timestamp } from "rxjs";
+import { Timestamp } from 'rxjs';
 
 // Tipos auxiliares para mejorar la legibilidad y reutilización
 type ContactStatus = 'active' | 'inactive' | 'prospect';
@@ -35,24 +35,21 @@ export interface RestaurantClient {
   // Identificación básica
   id: string;
   name: string;
-  
+
   // Información de contacto
   contact: ContactInfo;
-  
+
   // Ubicación
   address: Address;
-  
-  
+
   // Redes sociales (estructura más definida)
   //socialMedia?: SocialMedia;
-  
+
   // Estado y metadatos
   status: ContactStatus;
-  createdAt: Timestamp<Date>;
+  createdAt: Date;
   updatedAt: Date;
-  
 
-  
   // Usuarios asociados
   users?: RestaurantUser[];
 }
