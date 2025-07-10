@@ -1,62 +1,68 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
   <div>
-    <label>ID</label>
-    <input formControlName="id" type="text">
+    <label for="id">ID</label>
+    <input id="id" formControlName="id" type="text">
   </div>
+  
   <div>
-    <label>Nombre</label>
-    <input formControlName="name" type="text">
+    <label for="name">Nombre</label>
+    <input id="name" formControlName="name" type="text">
   </div>
+  
   <fieldset formGroupName="contact">
     <legend>Contacto</legend>
     <div>
-      <label>Nombre</label>
-      <input formControlName="name" type="text">
+      <label for="contactName">Nombre</label>
+      <input id="contactName" formControlName="name" type="text">
     </div>
     <div>
-      <label>Email</label>
-      <input formControlName="email" type="email">
+      <label for="contactEmail">Email</label>
+      <input id="contactEmail" formControlName="email" type="email">
     </div>
     <div>
-      <label>Teléfono</label>
-      <input formControlName="phone" type="text">
+      <label for="contactPhone">Teléfono</label>
+      <input id="contactPhone" formControlName="phone" type="text">
     </div>
   </fieldset>
+  
   <fieldset formGroupName="address">
     <legend>Dirección</legend>
     <div>
-      <label>Calle</label>
-      <input formControlName="street" type="text">
+      <label for="street">Calle</label>
+      <input id="street" formControlName="street" type="text">
     </div>
     <div>
-      <label>Ciudad</label>
-      <input formControlName="city" type="text">
-    </div>
-   <div>
-      <label>País</label>
-      <input formControlName="country" type="text">
+      <label for="city">Ciudad</label>
+      <input id="city" formControlName="city" type="text">
     </div>
     <div>
-      <label>Código Postal</label>
-      <input formControlName="postalCode" type="text">
+      <label for="country">País</label>
+      <input id="country" formControlName="country" type="text">
+    </div>
+    <div>
+      <label for="postalCode">Código Postal</label>
+      <input id="postalCode" formControlName="postalCode" type="text">
     </div>
   </fieldset>
+  
   <div>
-    <label>Estado</label>
-    <select formControlName="status">
+    <label for="status">Estado</label>
+    <select id="status" formControlName="status">
       <option value="active">Activo</option>
       <option value="inactive">Inactivo</option>
       <option value="prospect">Prospecto</option>
     </select>
   </div>
+  
   <div>
-    <label>Fecha de creación</label>
-    <input formControlName="createdAt" type="text">
+    <label for="createdAt">Fecha de creación</label>
+    <input id="createdAt" formControlName="createdAt" type="text" readonly>
   </div>
+  
   <div>
-    <label>Fecha de actualización</label>
-    <input formControlName="updatedAt" type="text">
+    <label for="updatedAt">Fecha de actualización</label>
+    <input id="updatedAt" formControlName="updatedAt" type="text" readonly>
   </div>
-  <!-- users se omite por simplicidad, puedes agregar un FormArray si lo necesitas -->
+  
   <button type="submit">Guardar</button>
 </form>

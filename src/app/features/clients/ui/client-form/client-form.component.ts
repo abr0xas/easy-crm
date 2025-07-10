@@ -44,7 +44,7 @@ export class ClientFormComponent {
   onSubmit() {
     if (this.form.valid) {
       const clientData = this.form.value;
-      this.clientCreated.emit(clientData);
+      this.clientCreated.emit(clientData as RestaurantClient);
     } else {
       this.form.markAllAsTouched();
       console.log('Formulario inválido');

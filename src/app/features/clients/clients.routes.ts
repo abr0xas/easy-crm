@@ -13,6 +13,11 @@ export const CLIENTS_ROUTES: Routes = [
     component: ClientCreateComponent,
     title: 'Nuevo Cliente'
   },
+  {
+    path: 'list',
+    component: ClientListComponent,
+    title: 'Lista de Clientes'
+  },
  /*  {
     path: ':id',
     component: ClientDetailComponent,
