@@ -2,6 +2,10 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
+        path: '',
+        loadChildren: () => import('./features/clients/clients.routes').then(m => m.CLIENTS_ROUTES)
+      },
+    {
         path: 'clients',
         loadChildren: () => import('./features/clients/clients.routes').then(m => m.CLIENTS_ROUTES)
       },
