@@ -1,59 +1,169 @@
-# EasyCrm
+# EasyCRM
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+A modern Customer Relationship Management (CRM) application built with **Angular 20** and modern web technologies.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+- **Modern Angular 20**: Built with the latest Angular version featuring standalone components, signals, and modern control flow
+- **Client Management**: Complete CRUD operations for managing restaurant clients
+- **Responsive Design**: Modern, mobile-friendly user interface
+- **Lazy Loading**: Optimized routing with lazy-loaded feature modules
+- **Performance Optimized**: Built with Angular 20's latest performance optimizations
+
+## 🛠️ Technology Stack
+
+- **Frontend Framework**: Angular 20.2.1
+- **Language**: TypeScript 5.9.2
+- **Package Manager**: pnpm
+- **Build Tool**: Angular CLI 20.2.0
+- **Styling**: CSS with modern design principles
+- **Testing**: Karma + Jasmine
+
+## 📋 Prerequisites
+
+- **Node.js**: Version 18+ (LTS recommended)
+- **pnpm**: Version 8+ (recommended package manager)
+- **Angular CLI**: Version 20+
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-ng serve
+git clone <repository-url>
+cd easy-crm
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 2. Install Dependencies
 
 ```bash
+pnpm install
+```
+
+### 3. Start Development Server
+
+```bash
+pnpm start
+```
+
+Navigate to `http://localhost:4200/` in your browser. The application will automatically reload when you make changes.
+
+## 🏗️ Project Structure
+
+```
+src/
+├── app/
+│   ├── features/
+│   │   └── clients/           # Client management feature
+│   │       ├── data/          # Data layer (services, models)
+│   │       │   ├── container/ # Smart components
+│   │       │   ├── models/    # Data models
+│   │       │   └── services/  # Business logic services
+│   │       ├── ui/            # Presentational components
+│   │       └── clients.routes.ts
+│   ├── app.component.ts       # Root component
+│   ├── app.config.ts          # Application configuration
+│   └── app.routes.ts          # Main routing
+├── styles.css                 # Global styles
+└── main.ts                    # Application entry point
+```
+
+## 🧪 Development Commands
+
+### Code Generation
+
+```bash
+# Generate a new component
 ng generate component component-name
+
+# Generate a new service
+ng generate service service-name
+
+# Generate a new model
+ng generate interface model-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Building
 
 ```bash
-ng generate --help
+# Development build
+pnpm run build
+
+# Production build
+pnpm run build --configuration production
 ```
 
-## Building
-
-To build the project run:
+### Testing
 
 ```bash
-ng build
+# Run unit tests
+pnpm run test
+
+# Run tests in watch mode
+pnpm run test --watch
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Code Quality
 
 ```bash
-ng test
+# Format code with Prettier
+pnpm run format
+
+# Lint code
+ng lint
 ```
 
-## Running end-to-end tests
+## 🎯 Key Features
 
-For end-to-end (e2e) testing, run:
+### Client Management
+- **Create Clients**: Add new restaurant clients with contact and address information
+- **List Clients**: View all clients in a responsive table format
+- **Edit Clients**: Modify existing client information
+- **Client Status**: Track active, inactive, and prospect clients
 
-```bash
-ng e2e
-```
+### Modern Angular Patterns
+- **Standalone Components**: All components use Angular 20's standalone architecture
+- **Modern Control Flow**: Uses `@if`, `@for` instead of structural directives
+- **Signals**: Reactive state management with Angular signals
+- **Lazy Loading**: Feature-based code splitting for optimal performance
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🔧 Configuration
 
-## Additional Resources
+### Browserslist
+The project includes a `.browserslistrc` file configured for modern browser support:
+- Chrome (last 2 versions)
+- Firefox (last 2 versions)
+- Safari (last 2 versions)
+- Edge (version 79+)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Angular Configuration
+- **Zone.js Optimization**: Event coalescing enabled for better performance
+- **Client Hydration**: SSR-ready configuration
+- **Strict Mode**: TypeScript strict mode enabled for better code quality
+
+## 📱 Browser Support
+
+This application supports modern browsers with ES2022+ features. Legacy browser support (IE11, older Edge versions) is not provided.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🔗 Additional Resources
+
+- [Angular Documentation](https://angular.dev/)
+- [Angular CLI Overview](https://angular.dev/tools/cli)
+- [Angular 20 Features](https://angular.dev/guide/update-to-version-20)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+
+## 📞 Support
+
+For questions or support, please open an issue in the repository or contact the development team.
