@@ -5,6 +5,7 @@ import { ClientsService } from '../../services/clients.service';
 
 @Component({
   selector: 'app-client-create',
+  standalone: true,
   imports: [ClientFormComponent],
   templateUrl: './client-create.component.html',
   styleUrl: './client-create.component.css',
